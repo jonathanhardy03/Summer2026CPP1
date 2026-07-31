@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private Transform groundCheckTransform;
+    [SerializeField]
+    private LayerMask groundLayer;
+    [SerializeField]
+    private float groundCheckRadius = 0.2f;
+
+    private bool isGrounded;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -29,13 +37,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundLayer);
         float horizontalInput = Input.GetAxis("Horizontal");
 
         float moveX = horizontalInput * speed;
 
         rb.linearVelocityX = moveX;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
         }
