@@ -102,6 +102,17 @@ public class PlayerController : MonoBehaviour
         //Update animator parameters
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("HorizontalInput", Mathf.Abs(horizontalInput));
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            anim.SetTrigger("BurningMario");
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow) &&
+            Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("MoonMario");
+        }
     }
 
     private void SpriteFlip(float horizontalInput) => sr.flipX = (horizontalInput < 0);
