@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
         rb.linearVelocity = Vector2.zero;
 
@@ -98,6 +98,10 @@ public class PlayerController : MonoBehaviour
         }
 
         SpriteFlip(horizontalInput);
+
+        //Update animator parameters
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("HorizontalInput", Mathf.Abs(horizontalInput));
     }
 
     private void SpriteFlip(float horizontalInput) => sr.flipX = (horizontalInput < 0);

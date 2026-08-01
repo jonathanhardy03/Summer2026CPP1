@@ -1342,6 +1342,7 @@ GameObject:
   - component: {fileID: 773744297}
   - component: {fileID: 773744296}
   - component: {fileID: 773744295}
+  - component: {fileID: 773744298}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1510,14 +1511,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e80c04fee1520541adbe6c6d298f458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
+  speed: 10
   jumpForce: 7.5
-  rb: {fileID: 0}
-  groundCheckTransform: {fileID: 1588780385}
+  maxJumpCount: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheckRadius: 0.2
+--- !u!95 &773744298
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773744292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00e4c0fef350e8d419fef66302dcefe4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &792622873
 GameObject:
   m_ObjectHideFlags: 0
