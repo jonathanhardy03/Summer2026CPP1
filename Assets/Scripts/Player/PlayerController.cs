@@ -108,8 +108,7 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("BurningMario");
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) &&
-            Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("MoonMario");
         }
