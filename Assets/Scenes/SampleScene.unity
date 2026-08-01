@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 30669390}
   - component: {fileID: 30669392}
   - component: {fileID: 30669391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 175292631}
   - component: {fileID: 175292633}
   - component: {fileID: 175292632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249094725}
   - component: {fileID: 249094726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 564721607}
   - component: {fileID: 564721609}
   - component: {fileID: 564721608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 593912624}
   - component: {fileID: 593912626}
   - component: {fileID: 593912625}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 607617655}
   - component: {fileID: 607617657}
   - component: {fileID: 607617656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 647575022}
   - component: {fileID: 647575023}
   - component: {fileID: 647575024}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 667129384}
   - component: {fileID: 667129386}
   - component: {fileID: 667129385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685574649}
   - component: {fileID: 685574650}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1421,8 @@ Transform:
   m_LocalPosition: {x: -57.99, y: -5.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1588780385}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &773744295
@@ -1510,8 +1511,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
-  jumpForce: 5
+  jumpForce: 7.5
   rb: {fileID: 0}
+  groundCheckTransform: {fileID: 1588780385}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRadius: 0.2
 --- !u!1 &792622873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1529,7 @@ GameObject:
   - component: {fileID: 792622874}
   - component: {fileID: 792622876}
   - component: {fileID: 792622875}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1624,7 @@ GameObject:
   - component: {fileID: 899572435}
   - component: {fileID: 899572437}
   - component: {fileID: 899572436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,7 +1719,7 @@ GameObject:
   - component: {fileID: 1013843674}
   - component: {fileID: 1013843676}
   - component: {fileID: 1013843675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1814,7 @@ GameObject:
   - component: {fileID: 1132582379}
   - component: {fileID: 1132582381}
   - component: {fileID: 1132582380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1902,7 +1908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136345437}
   - component: {fileID: 1136345438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,7 +1987,7 @@ GameObject:
   - component: {fileID: 1238498271}
   - component: {fileID: 1238498273}
   - component: {fileID: 1238498272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2082,7 @@ GameObject:
   - component: {fileID: 1241684659}
   - component: {fileID: 1241684661}
   - component: {fileID: 1241684660}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2171,7 +2177,7 @@ GameObject:
   - component: {fileID: 1329600881}
   - component: {fileID: 1329600883}
   - component: {fileID: 1329600882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2266,7 +2272,7 @@ GameObject:
   - component: {fileID: 1408154031}
   - component: {fileID: 1408154033}
   - component: {fileID: 1408154032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2361,7 +2367,7 @@ GameObject:
   - component: {fileID: 1419575342}
   - component: {fileID: 1419575344}
   - component: {fileID: 1419575343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2456,7 +2462,7 @@ GameObject:
   - component: {fileID: 1449825498}
   - component: {fileID: 1449825500}
   - component: {fileID: 1449825499}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2550,7 +2556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460394556}
   - component: {fileID: 1460394557}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2629,7 +2635,7 @@ GameObject:
   - component: {fileID: 1565944855}
   - component: {fileID: 1565944857}
   - component: {fileID: 1565944856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2713,6 +2719,37 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &1588780384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588780385}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588780385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588780384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 773744294}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694577568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,7 +2761,7 @@ GameObject:
   - component: {fileID: 1694577569}
   - component: {fileID: 1694577571}
   - component: {fileID: 1694577570}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,7 +2856,7 @@ GameObject:
   - component: {fileID: 1786821689}
   - component: {fileID: 1786821691}
   - component: {fileID: 1786821690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2914,7 +2951,7 @@ GameObject:
   - component: {fileID: 1839420901}
   - component: {fileID: 1839420903}
   - component: {fileID: 1839420902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3068,7 +3105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1855157956}
   - component: {fileID: 1855157957}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3147,7 +3184,7 @@ GameObject:
   - component: {fileID: 1961322543}
   - component: {fileID: 1961322545}
   - component: {fileID: 1961322544}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3242,7 +3279,7 @@ GameObject:
   - component: {fileID: 2132880972}
   - component: {fileID: 2132880974}
   - component: {fileID: 2132880973}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
